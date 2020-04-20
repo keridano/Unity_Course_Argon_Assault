@@ -327,7 +327,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 838108305}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 356, y: 8, z: -139}
+  m_LocalPosition: {x: 356, y: -12, z: -139}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2068909652}
@@ -415,7 +415,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 80
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -461,7 +461,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   circuit: {fileID: 2068909653}
-  lookAheadForTargetOffset: 5
+  lookAheadForTargetOffset: 1.2
   lookAheadForTargetFactor: 0.1
   lookAheadForSpeedOffset: 10
   lookAheadForSpeedFactor: 0.2
@@ -552,7 +552,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1762758567}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 544, y: 10, z: 23}
+  m_LocalPosition: {x: 535, y: 40, z: 22}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2068909652}
@@ -604,9 +604,9 @@ Terrain:
   m_DetailObjectDistance: 80
   m_DetailObjectDensity: 1
   m_HeightmapPixelError: 50
-  m_SplatMapDistance: 500
+  m_SplatMapDistance: 1500
   m_HeightmapMaximumLOD: 0
-  m_ShadowCastingMode: 2
+  m_ShadowCastingMode: 1
   m_DrawHeightmap: 1
   m_DrawInstanced: 0
   m_DrawTreesAndFoliage: 1
@@ -688,7 +688,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2009563265}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 495, y: 50, z: 301}
+  m_LocalPosition: {x: 495, y: 10, z: 301}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2068909652}
@@ -780,10 +780,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31bdaa2c417a6495a90bb249e575e770, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xSpeed: 20
-  xRange: 11.5
-  ySpeed: 20
-  yRange: 7
+  speed: 15
+  xRange: 12
+  yRange: 8.5
+  positionPitchFactor: -1.2
+  controlPitchFactor: -20
+  positionYawFactor: 1.2
+  controlRollFactor: -30
 --- !u!1001 &7884733846618626633
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -804,27 +807,27 @@ PrefabInstance:
     - target: {fileID: 2516940403181851595, guid: 3db1b3cff9ea347b8a0aa938dc25db5d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2
+      value: -2.5
       objectReference: {fileID: 0}
     - target: {fileID: 2516940403181851595, guid: 3db1b3cff9ea347b8a0aa938dc25db5d,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 20
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 2516940403181851595, guid: 3db1b3cff9ea347b8a0aa938dc25db5d,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2516940403181851595, guid: 3db1b3cff9ea347b8a0aa938dc25db5d,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2516940403181851595, guid: 3db1b3cff9ea347b8a0aa938dc25db5d,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2516940403181851595, guid: 3db1b3cff9ea347b8a0aa938dc25db5d,
         type: 3}
