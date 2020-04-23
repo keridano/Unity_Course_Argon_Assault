@@ -1,37 +1,47 @@
 ﻿using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 
-public class Player : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
-    [Tooltip("In ms^-1")][SerializeField] float speed = 15f;
-
+    [Header("General")]
+    [Tooltip("In ms^-1")][SerializeField] float controlSpeed = 15f;
     [Tooltip("In m")] [SerializeField] float xRange = 20f;
     [Tooltip("In m")] [SerializeField] float yRange = 9f;
 
+    [Header("Screen Position")]
     [SerializeField] float positionPitchFactor = -1.5f;
-    [SerializeField] float controlPitchFactor = -30f;
     [SerializeField] float positionYawFactor = 2.5f;
+
+    [Header("Control Throw")]
+    [SerializeField] float controlPitchFactor = -30f;
     [SerializeField] float controlRollFactor = -30f;
 
     float xThrow;
     float yThrow;
 
-    // Start is called before the first frame update
-    void Start()
-    {
+    bool isControlEnabled;
 
+    private void Start()
+    {
+        isControlEnabled = true;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (!isControlEnabled) return;
+
         ProcessTranslation();
         ProcessRotation();
     }
 
-    void OnTriggerEnter(Collider other)
+    /// <summary>
+    /// Called by string reference
+    /// </summary>
+    void OnPlayerDeath() 
     {
-        print("Triggered!");   
+        print("Received Dead message");
+        isControlEnabled = false;
     }
 
     private void ProcessRotation()
@@ -54,7 +64,7 @@ public class Player : MonoBehaviour
     private float GetXPosition()
     {
         xThrow = CrossPlatformInputManager.GetAxis("Horizontal");
-        var xOffset = xThrow * speed * Time.deltaTime;
+        var xOffset = xThrow * controlSpeed * Time.deltaTime;
         var xRawPos = transform.localPosition.x + xOffset;
         var xClampPos = Mathf.Clamp(xRawPos, -xRange, xRange);
         return xClampPos;
@@ -63,9 +73,10 @@ public class Player : MonoBehaviour
     private float GetYPosition()
     {
         yThrow = CrossPlatformInputManager.GetAxis("Vertical");
-        var yOffset = yThrow * speed * Time.deltaTime;
+        var yOffset = yThrow * controlSpeed * Time.deltaTime;
         var yRawPos = transform.localPosition.y + yOffset;
         var yClampPos = Mathf.Clamp(yRawPos, -yRange, yRange);
         return yClampPos;
     }
+
 }
