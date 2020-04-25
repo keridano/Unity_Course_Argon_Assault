@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4154595508381948}
   - component: {fileID: 33463663454310500}
   - component: {fileID: 23048021916812000}
-  - component: {fileID: 954981373330362360}
+  - component: {fileID: 1032733828822492267}
   m_Layer: 0
   m_Name: AlienFighter
   m_TagString: Untagged
@@ -80,7 +80,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &954981373330362360
+--- !u!114 &1032733828822492267
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -93,4 +93,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathFx: {fileID: 0}
+  scoreBoard: {fileID: 0}
   parent: {fileID: 0}

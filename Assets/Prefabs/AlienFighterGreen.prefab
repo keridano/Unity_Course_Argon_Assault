@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4351941035781178}
   - component: {fileID: 33216508653316524}
   - component: {fileID: 23844358526652866}
-  - component: {fileID: 3604379379242219048}
+  - component: {fileID: -6078633469322685808}
   m_Layer: 0
   m_Name: AlienFighterGreen
   m_TagString: Untagged
@@ -80,7 +80,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &3604379379242219048
+--- !u!114 &-6078633469322685808
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -93,4 +93,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathFx: {fileID: 0}
+  scoreBoard: {fileID: 0}
   parent: {fileID: 0}

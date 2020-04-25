@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 33275231569138162}
   - component: {fileID: 23134056063201024}
   - component: {fileID: 64119596843337590}
-  - component: {fileID: 3419031633719447542}
+  - component: {fileID: 8815815313230092991}
   m_Layer: 0
   m_Name: AlienDestroyerWhite
   m_TagString: Untagged
@@ -95,7 +95,7 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 5c929a1e7e6053f499c799f0b76fc965, type: 3}
---- !u!114 &3419031633719447542
+--- !u!114 &8815815313230092991
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -108,4 +108,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathFx: {fileID: 0}
+  scoreBoard: {fileID: 0}
   parent: {fileID: 0}
