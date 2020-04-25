@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 4154595508381948}
   - component: {fileID: 33463663454310500}
   - component: {fileID: 23048021916812000}
-  - component: {fileID: 7770491169948435347}
   - component: {fileID: 954981373330362360}
   m_Layer: 0
   m_Name: AlienFighter
@@ -81,19 +80,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &7770491169948435347
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1458391615630120}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.5589441, y: 1.6560793, z: 1.8385116}
-  m_Center: {x: 0.00000071525574, y: -0.098113626, z: -0.3068394}
 --- !u!114 &954981373330362360
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -106,3 +92,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 121211c27cffe41c0be0328087afce96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathFx: {fileID: 2009803064073605288, guid: 1ec7b08dfb5a14736a8103742eedf550, type: 3}

@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 33275231569138162}
   - component: {fileID: 23134056063201024}
   - component: {fileID: 64119596843337590}
-  - component: {fileID: 416871289954887352}
   - component: {fileID: 3419031633719447542}
   m_Layer: 0
   m_Name: AlienDestroyerWhite
@@ -96,19 +95,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 5c929a1e7e6053f499c799f0b76fc965, type: 3}
---- !u!65 &416871289954887352
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1960062034117444}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 7.0721316, y: 4.40429, z: 18.998772}
-  m_Center: {x: 0.0000076293945, y: 0.79953825, z: 1.4622531}
 --- !u!114 &3419031633719447542
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -121,3 +107,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 121211c27cffe41c0be0328087afce96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathFx: {fileID: 2009803064073605288, guid: 1ec7b08dfb5a14736a8103742eedf550, type: 3}
