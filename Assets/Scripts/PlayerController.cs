@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 
 public class PlayerController : MonoBehaviour
@@ -7,6 +8,7 @@ public class PlayerController : MonoBehaviour
     [Tooltip("In ms^-1")][SerializeField] float controlSpeed = 15f;
     [Tooltip("In m")] [SerializeField] float xRange = 20f;
     [Tooltip("In m")] [SerializeField] float yRange = 9f;
+    [SerializeField] GameObject[] guns;
 
     [Header("Screen Position")]
     [SerializeField] float positionPitchFactor = -1.5f;
@@ -33,6 +35,7 @@ public class PlayerController : MonoBehaviour
 
         ProcessTranslation();
         ProcessRotation();
+        ProcessFiring();
     }
 
     /// <summary>
@@ -59,6 +62,19 @@ public class PlayerController : MonoBehaviour
     private void ProcessTranslation()
     {
         transform.localPosition = new Vector3(GetXPosition(), GetYPosition(), transform.localPosition.z);
+    }
+
+    private void ProcessFiring()
+    {
+        GunsOnOff(CrossPlatformInputManager.GetButton("Fire"));
+    }
+
+    private void GunsOnOff(bool isOn)
+    {
+        foreach (var gun in guns)
+        {
+            gun.SetActive(isOn);
+        }
     }
 
     private float GetXPosition()

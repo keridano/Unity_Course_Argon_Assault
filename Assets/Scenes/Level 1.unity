@@ -267,6 +267,12 @@ Transform:
   m_Father: {fileID: 2068909652}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &700065511 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7577445464726764374, guid: 3db1b3cff9ea347b8a0aa938dc25db5d,
+    type: 3}
+  m_PrefabInstance: {fileID: 7884733846618626633}
+  m_PrefabAsset: {fileID: 0}
 --- !u!108 &705507994 stripped
 Light:
   m_CorrespondingSourceObject: {fileID: 6352587465050793627, guid: 4005fa67c53fc403485b5bab8f04505c,
@@ -831,6 +837,12 @@ Transform:
   m_Father: {fileID: 2068909652}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1180590479 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7884733846870926900, guid: 3db1b3cff9ea347b8a0aa938dc25db5d,
+    type: 3}
+  m_PrefabInstance: {fileID: 7884733846618626633}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1221128774
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2045,10 +2057,27 @@ PrefabInstance:
       propertyPath: deathFx
       value: 
       objectReference: {fileID: 388945244}
+    - target: {fileID: 1348969894, guid: 3db1b3cff9ea347b8a0aa938dc25db5d, type: 3}
+      propertyPath: guns.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1348969894, guid: 3db1b3cff9ea347b8a0aa938dc25db5d, type: 3}
+      propertyPath: guns.Array.data[0]
+      value: 
+      objectReference: {fileID: 1180590479}
+    - target: {fileID: 1348969894, guid: 3db1b3cff9ea347b8a0aa938dc25db5d, type: 3}
+      propertyPath: guns.Array.data[1]
+      value: 
+      objectReference: {fileID: 700065511}
     - target: {fileID: 2514476928975400407, guid: 3db1b3cff9ea347b8a0aa938dc25db5d,
         type: 3}
       propertyPath: m_Name
       value: Player Ship
+      objectReference: {fileID: 0}
+    - target: {fileID: 2514476928975400407, guid: 3db1b3cff9ea347b8a0aa938dc25db5d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2516940403181851595, guid: 3db1b3cff9ea347b8a0aa938dc25db5d,
         type: 3}
@@ -2140,6 +2169,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player Death Fx
       objectReference: {fileID: 0}
+    - target: {fileID: 7577445464726764374, guid: 3db1b3cff9ea347b8a0aa938dc25db5d,
+        type: 3}
+      propertyPath: m_Name
+      value: Right Gun
+      objectReference: {fileID: 0}
+    - target: {fileID: 7577445464726764374, guid: 3db1b3cff9ea347b8a0aa938dc25db5d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7577445464726764459, guid: 3db1b3cff9ea347b8a0aa938dc25db5d,
         type: 3}
       propertyPath: playOnAwake
@@ -2159,6 +2198,16 @@ PrefabInstance:
         type: 3}
       propertyPath: CollisionModule.collisionMessages
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7884733846870926900, guid: 3db1b3cff9ea347b8a0aa938dc25db5d,
+        type: 3}
+      propertyPath: m_Name
+      value: Left Gun
+      objectReference: {fileID: 0}
+    - target: {fileID: 7884733846870926900, guid: 3db1b3cff9ea347b8a0aa938dc25db5d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7884733846870927049, guid: 3db1b3cff9ea347b8a0aa938dc25db5d,
         type: 3}
