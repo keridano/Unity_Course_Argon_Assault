@@ -40,7 +40,7 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     void OnPlayerDeath() 
     {
-        print("Received Dead message");
+        print("Received Dead message by CollisionHandler");
         isControlEnabled = false;
     }
 
