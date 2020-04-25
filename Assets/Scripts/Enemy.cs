@@ -5,6 +5,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] GameObject deathFx;
     [SerializeField] Transform parent;
     [SerializeField] int scorePerHit = 20;
+    [SerializeField] int hits = 10;
 
     ScoreBoard scoreBoard;
     bool isDying;
@@ -23,16 +24,24 @@ public class Enemy : MonoBehaviour
 
     private void OnParticleCollision(GameObject other)
     {
-        if(!isDying)
-        {
-            isDying = true;
+        ProcessHit();
+        if (hits <= 1)
+            KillEnemy();
+    }
 
-            //Update score
-            scoreBoard.ScoreHit(scorePerHit);
+    private void ProcessHit()
+    {
+        scoreBoard.ScoreHit(scorePerHit);
+        hits--;
+    }
 
-            var instantiatedFx = Instantiate(deathFx, transform.position, Quaternion.identity);
-            instantiatedFx.transform.parent = parent;
-            Destroy(gameObject);
-        }
+    private void KillEnemy()
+    {
+        if (isDying) return; //prevents multiple deathFX instances
+
+        isDying = true;
+        var instantiatedFx = Instantiate(deathFx, transform.position, Quaternion.identity);
+        instantiatedFx.transform.parent = parent;
+        Destroy(gameObject);
     }
 }
