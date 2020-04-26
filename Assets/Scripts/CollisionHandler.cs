@@ -8,7 +8,8 @@ public class CollisionHandler : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        StartDeathSequence();
+        if(other.tag != "Friendly")
+            StartDeathSequence();
     }
 
     private void StartDeathSequence()
