@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     [Tooltip("In m")] [SerializeField] float xRange = 20f;
     [Tooltip("In m")] [SerializeField] float yRange = 9f;
     [SerializeField] AudioClip shipThrust;
+    [SerializeField] AudioClip gunBlast;
     [SerializeField] GameObject[] guns;
 
     [Header("Screen Position")]
@@ -86,6 +87,8 @@ public class PlayerController : MonoBehaviour
         {
             gun.SetActive(isOn);
         }
+        if (isOn)
+            audioSource.PlayOneShot(gunBlast, 0.2f);
     }
 
     private float GetXPosition()

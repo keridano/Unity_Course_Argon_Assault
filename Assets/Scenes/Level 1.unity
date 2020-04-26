@@ -315,7 +315,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 3014c490461eb4bba9e93a30a73fb6f1, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.2
+  m_Volume: 0.16
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -2415,6 +2415,10 @@ PrefabInstance:
       propertyPath: shipThrust
       value: 
       objectReference: {fileID: 8300000, guid: 61c1161fe325d42a98474fa966948afc, type: 3}
+    - target: {fileID: 1348969894, guid: 3db1b3cff9ea347b8a0aa938dc25db5d, type: 3}
+      propertyPath: gunBlast
+      value: 
+      objectReference: {fileID: 8300000, guid: 28bc110e524aa478aaf9cecbc0e6ac1d, type: 3}
     - target: {fileID: 2514476928975400407, guid: 3db1b3cff9ea347b8a0aa938dc25db5d,
         type: 3}
       propertyPath: m_Name
@@ -2584,6 +2588,11 @@ PrefabInstance:
         type: 3}
       propertyPath: EmissionModule.rateOverTime.scalar
       value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7884733846870927049, guid: 3db1b3cff9ea347b8a0aa938dc25db5d,
+        type: 3}
+      propertyPath: NoiseModule.enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3db1b3cff9ea347b8a0aa938dc25db5d, type: 3}
