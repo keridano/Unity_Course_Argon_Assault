@@ -87,7 +87,8 @@ public class PlayerController : MonoBehaviour
     {
         foreach (var gun in guns)
         {
-            gun.SetActive(isOn);
+            var emissionComponent = gun.GetComponent<ParticleSystem>().emission;
+            emissionComponent.enabled = isOn;
         }
         if (isOn)
             audioSource.PlayOneShot(gunBlast, 0.2f);
