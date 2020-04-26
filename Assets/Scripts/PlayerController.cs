@@ -8,9 +8,11 @@ public class PlayerController : MonoBehaviour
     [Tooltip("In ms^-1")][SerializeField] float controlSpeed = 15f;
     [Tooltip("In m")] [SerializeField] float xRange = 20f;
     [Tooltip("In m")] [SerializeField] float yRange = 9f;
+    [SerializeField] GameObject[] guns;
+
+    [Header("Audio")]
     [SerializeField] AudioClip shipThrust;
     [SerializeField] AudioClip gunBlast;
-    [SerializeField] GameObject[] guns;
 
     [Header("Screen Position")]
     [SerializeField] float positionPitchFactor = -1.5f;
