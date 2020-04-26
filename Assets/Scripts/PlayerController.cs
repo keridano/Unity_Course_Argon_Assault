@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     [Tooltip("In ms^-1")][SerializeField] float controlSpeed = 15f;
     [Tooltip("In m")] [SerializeField] float xRange = 20f;
     [Tooltip("In m")] [SerializeField] float yRange = 9f;
+    [SerializeField] AudioClip shipThrust;
     [SerializeField] GameObject[] guns;
 
     [Header("Screen Position")]
@@ -18,19 +19,29 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float controlPitchFactor = -30f;
     [SerializeField] float controlRollFactor = -30f;
 
+    AudioSource audioSource;
+
     float xThrow;
     float yThrow;
-
     bool isControlEnabled;
 
     private void Start()
     {
-        isControlEnabled = true;
+        isControlEnabled = false;
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (!audioSource.isPlaying && audioSource.clip != shipThrust)
+        {
+            audioSource.clip = shipThrust;
+            audioSource.loop = true;
+            audioSource.Play();
+            isControlEnabled = true;
+        }
+
         if (!isControlEnabled) return;
 
         ProcessTranslation();
@@ -39,12 +50,12 @@ public class PlayerController : MonoBehaviour
     }
 
     /// <summary>
-    /// Called by string reference
+    /// Called by string reference in CollisionHandler.cs
     /// </summary>
     void OnPlayerDeath() 
     {
-        print("Received Dead message by CollisionHandler");
         isControlEnabled = false;
+        audioSource.Stop();
     }
 
     private void ProcessRotation()
